@@ -1,0 +1,16 @@
+body {
+    transition: 1s ease-in;
+}
+
+#container {
+    position: absolute;
+    font-size: 42vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    font-family: "job-clarendon", serif;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
