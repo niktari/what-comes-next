@@ -1,17 +1,42 @@
+/* @font-face {
+    font-family: "PPRight";
+    src: url("PPRightSerifMono-Fine.otf") format("opentype"),
+  } */
+
 body {
     transition: 1s ease-in;
     background-color: #ffffff;
 }
 
 #container {
+    display: flex;
     position: absolute;
-    font-size: 24vw;
+    font-size: 7vw;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -55%);
-    font-family: "job-clarendon", serif;
-    letter-spacing: -0.02em;
-    font-weight: 300;
+    font-family: "Xanh Mono", monospace;
+    font-weight: 400;
     font-style: normal;
+    letter-spacing: -0.03em;
+    width: max-content;
+    /* background-color: red; */
+}
+
+span {
+    display: block;
+    /* width: 8vw; */
+    /* background-color: red; */
+    /* border: 1px solid blue; */
     text-align: center;
+    padding-top: 6px;
+}
+
+.special {
+    padding-top: 10px;
+    font-family: "Inter";
+    margin: 0 -0.02em;
+    /* letter-spacing: -0.05em; */
+    /* width: 6vw;
+    margin-left: -3vw; */
 }

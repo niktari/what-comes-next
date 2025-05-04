@@ -1,13 +1,39 @@
-const container = document.getElementById("container");
-const updateInterval = setInterval(updateAmount, 1000);
+// Start with a number
+// Increment
+// Turn into string
+// Split the string
+// Inject
+// Rejoin the number
+// Increment
+// Turn into string
+// Split the string
+// Inject
+// (...)
 
+let increment = 0.01133;
 let rate = 0.01133;
 
-function updateAmount() {
-    container.innerHTML = "$" + rate.toFixed(5);
+const valueElems = document.querySelectorAll(".value");
 
-    rate += 0.01133;
+window.onload = function() {
+
+function updateAmount() {
+    rate += increment;
+    let numStrings = rate.toString().split('')
+
+   for(let i = 0; i < valueElems.length; i++) {
+    valueElems[i].innerHTML = numStrings[i];
+
+    if(!numStrings[i]) {
+        valueElems[i].innerHTML = "0";
+    }
+    }
+
+    let actualNum = Number(numStrings.join(""));
+    console.log(actualNum)
 }
+
+const updateInterval = setInterval(updateAmount, 1000);
 
 function stopUpdate() {
     clearInterval(updateInterval);
@@ -17,4 +43,5 @@ function stopUpdate() {
 
 setTimeout(stopUpdate, 180000);
 
-// updateAmount();
+}
+
